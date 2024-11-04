@@ -27,6 +27,10 @@ public class Card {
         CLUBS, DIAMONDS, SPADES, HEARTS
     }
 
+    public enum Colour {
+        RED, BLACK
+    }
+
     CardEnum cardEnum;
 
     public Card(CardEnum cardEnum) {
