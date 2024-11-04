@@ -3,47 +3,32 @@
  */
 package example;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import td1.Chapitre;
-import td1.Document;
-import td1.Memoire;
 
 import java.util.ArrayList;
 import java.util.List;
+import td2.Card;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AppTest {
 
-    @Test public void tailleMemoireIsNotEqualsToSeven() {
-        List<String> pages = new ArrayList<>();
-        List<Chapitre> cs = new ArrayList<>();
+    @Before
+    public void setUp() {
 
-        for(int i=0; i<4; i++) pages.add("Page " + i);
-
-        cs.add(new Chapitre("introduction", pages) );
-        cs.add(new Chapitre("patrons", pages));
-        cs.add(new Chapitre("antiPatrons", pages));
-        cs.add(new Chapitre("conclusion", pages));
-
-        Document m1 = new Memoire("Mon memoire", cs);
-
-        assertNotEquals(m1.taille(), 7);
+       Card joker = new Card(Card.CardEnum.JOKER);
     }
 
-    @Test public void tailleMemoireIsEqualsToSeven() {
-        List<String> pages = new ArrayList<>();
-        List<Chapitre> cs = new ArrayList<>();
-
-        for(int i=0; i<4; i++) pages.add("Page " + i);
-
-        cs.add(new Chapitre("introduction", pages) );
-        cs.add(new Chapitre("patrons", pages));
-        cs.add(new Chapitre("antiPatrons", pages));
-        cs.add(new Chapitre("conclusion", pages));
-
-        Document m1 = new Memoire("Mon memoire", cs);
-
-        assertEquals(m1.taille(), 16);
+    @After
+    public void tearDown() {
+        Card joker = null;
     }
+
+    @Test
+    public void colourIsCorrect() {
+        assertEquals();
+    }
+
 }
